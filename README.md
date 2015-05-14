@@ -1,41 +1,10 @@
 # p3_grading_script
 grading script for Computer Security
 
- Ideal workflow:
+TODO: automate going into each students' submission directory, unpack the tar file, move files to testing directory.
 
- grader copies student's makefile and runpriv.c to /home/eilin/ecs153_grading/p3_test_dir/
-
- "> python runtest.py"
-
- script makes runpriv, moves to /badID/
-
- script waits for grader to visually inspect c source and change defined ID
-
- script makes runpriv, copies to /goodID_noSniff/, copies to /goodID_oldSniff/, copies to /goodID_sniff/
-
- script tests file in /badID/
-
-	test, delete runpriv
-
- script tests file in /goodID_noSniff/
-
-	test, delete runpriv
-
- script tests file in /goodID_sniff/
-
-	create sniff, chmod so user can't execute, test, delete sniff
-
-	create sniff, chmod so anyone can read, test, delete sniff
-
-	create sniff, chmod so only user can execute, no one else can rwx, test, delete sniff
-
- script tests file in /goodID_oldSniff
-
-	test, delete runpriv
-
- script asks to delete makefile and runpriv.c from /home/eilin/ecs153_grading/p3_test_dir/
-
- script exits
+Workflow:
+move submission files to testing directory, run runtest.py, grade
 
 
 Covers the following cases:
